@@ -1,0 +1,26 @@
+<h1>Student Details</h1>
+
+<%= link_to "Back to Students", students_path %>
+
+<h2>Name:</h2>
+<p><strong><%= @student.name %></strong></p>
+
+<h2>Major:</h2>
+<p><strong><%= @student.major %></strong></p>
+
+<h2>Age:</h2>
+<p><strong><%= @student.age %></strong></p>
+
+<h2>Instructor:</h2>
+<p><strong><%= link_to @student.instructor.name, instructor_path(@student.instructor) %></strong></p>
+
+<br>
+
+<button><%= link_to "Edit Student", edit_student_path(@student) %></button>
+
+<br>
+<br>
+
+<%= form_for @student, method: :delete do |f| %>
+<%= f.submit "Delete Student" %>
+<% end %>
