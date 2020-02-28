@@ -6,6 +6,6 @@
     <%= f.label :age %>
     <%= f.text_field :age %>
     <%= f.label :instructor %>
-    <%= f.collection_select :instructor %>
+    <%= f.collection_select :instructor_id, @instructors, :id, :name %>
     <%= f.submit %>
 <% end %>

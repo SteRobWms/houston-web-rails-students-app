@@ -1,3 +1,6 @@
+Instructor.destroy_all
+Student.destroy_all
+
 i1 = Instructor.create(name: "Vidhi")
 i2 = Instructor.create(name: "Josh")
 i3 = Instructor.create(name: "Brian")

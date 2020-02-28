@@ -1,6 +1,6 @@
 class InstructorsController < ApplicationController
   
-  before_action :set_instructor, only: [:show, :edit, :destroy]
+  before_action :set_instructor, only: [:show, :edit, :update, :destroy]
   
   def index
     @instructors = Instructor.all
@@ -26,7 +26,7 @@ class InstructorsController < ApplicationController
   end
 
   def update
-    if @instructor = Instructor.update(instructor_params)
+    if @instructor.update(instructor_params)
       redirect_to instructor_path(@instructor)
     else
       redirect_to @instructor
